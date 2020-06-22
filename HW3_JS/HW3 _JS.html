@@ -62,17 +62,29 @@
     // }
     // alert(arr);
 
-    // //task3
+    //task3
 
-    // var getSizeArr = +prompt('Укажите размер массива', '');
-    // var arr = new Array();
-    // var i = 0;
-    // while (i < (getSizeArr/2)) {
-    //     arr.unshift(['odd', 'odd', 'odd',]);
-    //     arr.unshift(['even', 'even', 'even',]);
-    //     i++
-    // }
-    // console.log(arr);
+    var getSizeArr = +prompt('Укажите размер массива', '');
+    var arr = new Array();
+    var subArrLen = 5;
+    var i = 0;
+    var odd = new Array();
+    var even = new Array();
+
+    for (var i = 0; i < getSizeArr; i++) {
+        if (arr.length % 2 != 0) {
+            arr.unshift(odd);
+        } else {
+            arr.unshift(even);
+        }    
+    }
+
+    for(var j = 0; j < subArrLen; j++) {
+            odd.unshift('odd',);
+            even.unshift('even',);
+        }
+    
+    console.log(arr);
     
     
     // //task4
