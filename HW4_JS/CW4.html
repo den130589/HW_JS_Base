@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practise_Lesson4</title>
+</head>
+<body>
+    <!-- 
+        1. Напишите функцию, которая принимает массив в качестве аргумента. Используя slice (), извлеките информацию из массива аргументов и верните новый массив, содержащий элементы «warm» и «sunny».
+
+        ['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']
+
+        ########
+
+        2. Напишите функцию подсчета градусов Фаренгейта при входящем параметре температуры в цельсиях.
+        Алгоритм пересчета из градусов Цельсия в градусы Фаренгейта - это температура в градусах Цельсия, умноженная на 9/5 плюс 32.         
+
+        ########
+
+        3. Напишите функцию которая бы переворачивала предоставленную строку
+        Возможно, вам придется превратить строку в массив, прежде чем вы можете обратить его. 
+        Ваш результат должен быть строкой.
+        "something"
+
+        ########
+
+        4. Напишите функцию которая возвращает длину самого длинного слова в предложении. 
+        Ваш ответ должен быть числом.
+        "The quick brown fox jumped over the lazy dog"
+
+
+     -->
+     <script>
+         //task 1
+         var arr = ['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms'];
+        
+         function sliceArr(a) {
+           return a.slice(2, 4);  
+         }
+         
+         //task 2
+         function convertTemp(a) {
+             if (Number.isInteger(a)) {
+                return (a * 9/5) + 32;
+             } else {
+                 return 'введите число';
+             }
+         }
+
+         //task 3
+         function reversWorld(a) {
+             var arr = a.split('');
+             var arrRev = arr.reverse();
+             return arrRev.join('');
+         }
+
+         //Task 4
+         var str = 'The quick brown fox jumped over the lazy dog';
+         function searchLongWorld(){
+            var getArr = str.split(' ');
+            var max = 0;
+            for (var i = 0; i < getArr.length; i++) {
+                if (getArr[i].length > max) {
+                    max = getArr[i].length;
+                }
+            }
+            return max;
+
+         }
+     </script>
+</body>
+</html>
