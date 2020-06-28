@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>practise_lesson_5</title>
+</head>
+<body>
+    <!-- 
+        1. Обрезать строку (первый аргумент), если она длиннее заданной максимальной длины строки (второй аргумент). Вернуть усеченную строку с ... окончанием.
+
+       
+
+        2. Создайте функцию, которая просматривает массив (первый аргумент) и возвращает первый элемент в массиве, который проходит проверку на истинность (второй аргумент). Если ни один элемент не проходит тест, вернуть undefined.
+
+      
+
+        3. Проверьте, классифицировано ли значение как логический примитив. Верните true или false.
+
+        Булевы примитивы истинны и ложны.
+
+        
+        4. Напишите код, выполнив задание из каждого пункта отдельной строкой:
+            Создайте пустой объект user.
+            Добавьте свойство name со значением John.
+            Добавьте свойство surname со значением Smith.
+            Измените значение свойства name на Pete.
+            Удалите свойство name из объекта.
+
+        5. Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+     -->
+
+     <script>
+         //task1
+
+          function truncateString(str, num) {
+                var arr = str.split('');
+                var arr2 = [];
+                for (var i = 0; i < num; i++) {
+                   arr2.push(arr[i]);
+                  
+                }
+                var string = arr2.join('');
+                console.log(string + '...');
+        
+        }
+        truncateString('Clear out that junk in your trunk', 8);
+
+
+        //task2
+        var arr = ['one', 'two', 'three', 'four'];
+        function findArr (arr, val) {
+            var test=0;
+            for (var i = 0; i < arr.length; i++) {
+                if (val == arr[i]) {
+                    test = true;
+                    return test;
+                } else if (val != arr[i]) {
+                    test = false;
+                    return test;
+
+                }
+            }
+           
+        }
+
+        console.log(findArr(arr, 'two'));
+
+       //task3
+
+
+       function bool (a) {
+           if (a === true) {
+               return true;
+           } else if (a !== true) {
+               return false;
+           }
+       }
+
+       bool(true);
+
+
+    //    //task4
+
+    //    var obj = {};
+    //    obj.name = 'John';
+    //    obj.surname = 'Smith';
+    //    obj.name = 'Pete';
+    //    delete obj.name;
+
+
+       //task5
+
+       var test = new Object();
+
+       function isEmpty(obj) {
+            for (var key in obj) {
+                return false;
+            }
+            return true;
+       }
+
+       console.log(isEmpty(test))
+     </script>
+</body>
+</html>

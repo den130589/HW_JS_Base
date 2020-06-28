@@ -1,0 +1,201 @@
+﻿<!-- 
+    1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий, в каком квадранте в декартовой системе координат находится данная точка. Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
+    
+    2. Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного двух чисел.
+       Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
+       В зависимости от принятого знака операции, вызвать соответствующий метод.
+
+    3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
+       содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
+       Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+    
+    4. Для предыдущего заыдания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+       будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+       Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+           • "director" — 3000;
+           • "manager" — 1500;
+           • "programmer" — 2000;
+           • для остальных значений — 1000.
+       После выполнения функции — вывести информацию о сотрудниках.
+           
+    5. Для задания 3 создать метод, позволяющий отсортировать массив сотрудников по одному из свойств: name, sName, age, occupation, salary.
+       Параметр для сортировки принимается от пользователя.
+       После выполнения функции — вывести информацию о сотрудниках.
+
+     -->
+     <!DOCTYPE html>
+     <html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+      <title></title>
+        <script>
+         //   //task1
+         //   var point = {
+         //      x : 5,
+         //      y : -10,
+         //      getQuadrant: function calc (x, y) {
+         //         if (x > 0 && y > 0) {
+         //            alert('Точки находятся в верхнем правом квадранте');
+         //         }
+         //         if (x > 0 && y < 0) {
+         //          alert('Точки находятся в нижнем правом квадранте');
+         //         }
+         //         if (x < 0 && y < 0) {
+         //          alert('Точки находятся в нижнем левом квадранте');
+         //         }
+         //         if (x < 0 && y > 0) {
+         //          alert('Точки находятся в верхнем левом квадранте');
+         //         }
+         //      } 
+         //   }
+         //   point.getQuadrant(point.x, point.y);
+
+
+         // //task2
+
+         // var oper1 = +prompt('введите число');
+         // var oper2 = +prompt('введите число');
+         // var sign = prompt('укажите матю операцию (+, -, *, /)');
+
+         // var calculator = {
+         //    sum : function (operand1, operand2, sign){
+         //       return operand1 + operand2;
+         //    },
+         //    dif : function (operand1, operand2, sign){
+         //       return operand1 - operand2;
+         //    },
+         //    mult : function (operand1, operand2, sign){
+         //       return operand1 * operand2;
+         //    },
+         //    div : function (operand1, operand2, sign){
+         //       return operand1 / operand2;
+         //    },
+         // }
+
+         // function calc (a, b, c) {
+         //    if (Number.isInteger(a) && Number.isInteger(b) && (sign == '+' || sign == '-' || sign == '*' || sign == '/')) {
+         //       switch (c) {
+         //          case '+' : alert(calculator.sum(a, b, c));
+         //          break;
+         //          case '-' : alert(calculator.dif(a, b, c));
+         //          break;
+         //          case '*' : alert(calculator.mult(a, b, c));
+         //          break;
+         //          case '/' : alert(calculator.div(a, b, c));
+         //          break;
+         //       } 
+         //    } else {
+         //       alert('Вы указали неверное значение');
+         //    }
+         // }
+
+         // calc (oper1, oper2, sign);
+         
+
+         //task3
+         var searchPersona = 'Антон';
+         
+         var personal = [
+            {
+               name: 'Петя',
+               sName: 'Петров',
+               age: 20,
+               occupation: 'программист', 
+            },
+            {
+               name: 'Антон',
+               sName: 'Антонов',
+               age: 25,
+               occupation: 'бухгалтер', 
+            },
+            {
+               name: 'Сергей',
+               sName: 'Сергеев',
+               age: 30,
+               occupation: 'директор', 
+            },
+            
+
+         ]
+         function search (a, b) {
+            for (var i = 0; i < a.length; i++) {
+                  if (a[i].name === b) {
+                   var obj = a[i];
+                   return obj;
+                   break; 
+          
+                 }
+            }
+           }
+            
+            
+         console.log(search(personal, searchPersona));
+
+         
+         var newPers = {
+               name: 'Миша',
+               sName: 'Михайлов',
+               age: 30,
+               occupation: 'программист', 
+
+         }
+
+
+         function addPersonal (arr, addObj) {
+            arr.push(addObj);
+            console.log(arr);
+         }
+
+         addPersonal(personal, newPers); 
+         
+
+
+         //Task4
+
+         function addVal (a) {
+            for (var i = 0; i < a.length; i++) {
+                  if (a[i].occupation === 'программист') {
+                   a[i].salary = 2000;
+                  } else 
+                  if (a[i].occupation === 'директор') {
+                   a[i].salary = 3000;
+                  } else
+                  if (a[i].occupation === 'бухгалтер') {
+                   a[i].salary = 1500;
+                  } 
+                  else {
+                     a[i].salary = 1000;
+                  }
+               }
+               console.log(a);
+           }
+
+           addVal(personal);
+
+         //task5
+
+         var findPers = prompt('Поиск сотрудника по должности, введите должность').toLowerCase();
+         
+         function sort (arr, param) {
+                 var sortArr = []; 
+                 for (var i = 0; i < arr.length; i++) {
+                    if (arr[i].occupation == param) {
+                     sortArr.push(arr[i]);
+                    } 
+                    
+                 }
+                 if (sortArr.length != 0) {
+                  console.log(sortArr);
+                 } else {
+                    alert('нет совпадений');
+                 }
+                 
+                  
+         }  
+
+
+         sort(personal, findPers);
+        </script>
+    </head>
+    <body>
+    </body>
+    </html>
