@@ -71,71 +71,71 @@
     //    alert(powNum(num, pow));
 
 
-    // //task3
-    // var userChoice = prompt('Камень - ножницы - бумага').toLocaleLowerCase();
-    // var computerChoice = Math.random();
+    //task3
+    var userChoice = prompt('Камень - ножницы - бумага').toLocaleLowerCase();
+    var computerChoice = Math.random();
     
-    // console.log(userChoice); 
+    console.log(userChoice); 
 
-    // function getRandomInt(min, max) {
-    //     return Math.floor(Math.random() * (max - min)) + min;
-    // }  
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }  
 
-    // function game(a, b) {
-    //     if (userChoice == 'камень' || userChoice == 'ножницы' || userChoice == 'бумага') {
+    function game(a, b) {
+        if (userChoice == 'камень' || userChoice == 'ножницы' || userChoice == 'бумага') {
             
                 
-    //         if (userChoice == 'камень') {
-    //             userChoice = (getRandomInt(0, 334)) / 1000;
-    //         }
-    //         if (userChoice == 'ножницы') {
-    //             userChoice = getRandomInt(335, 667) / 1000;
-    //         }
-    //         if (userChoice == 'бумага') {
-    //             userChoice = getRandomInt(667, 1000) / 1000;
-    //         }
+            if (userChoice == 'камень') {
+                userChoice = (getRandomInt(0, 334)) / 1000;
+            }
+            if (userChoice == 'ножницы') {
+                userChoice = getRandomInt(335, 667) / 1000;
+            }
+            if (userChoice == 'бумага') {
+                userChoice = getRandomInt(667, 1000) / 1000;
+            }
 
-    //         //ничья
-    //         if ((userChoice > 0 && userChoice < 0.355) && (computerChoice > 0 && computerChoice < 0.355)) {
-    //             return alert('Ничья');
-    //         }
-    //         if ((userChoice > 0.355 && userChoice < 0.668) && (computerChoice > 0.355 && computerChoice < 0.668)) {
-    //             return alert('Ничья');
-    //         }
-    //         if ((userChoice > 0.668 && userChoice < 1) && (computerChoice > 0.668 && computerChoice < 0.1)) {
-    //             return alert('Ничья');
-    //         }
-    //         //выйгрыш
-    //         if ((userChoice > 0 && userChoice < 0.355) && (computerChoice > 0.355 && computerChoice < 0.668)) {
-    //              return alert('Вы выйграли!');
-    //         }
-    //         if ((userChoice > 0.355 && userChoice < 0.668) && (computerChoice > 0.668 && computerChoice < 1)) {
-    //             return alert('Вы выйграли!');
-    //         }
-    //         if ((userChoice > 0.668 && userChoice < 1) && (computerChoice > 0 && computerChoice < 0.355)) {
-    //             return alert('Вы выйграли!');
-    //         }
-    //         //пройгрыш
-    //         if ((userChoice > 0 && userChoice < 0.355) && (computerChoice > 0.668 && computerChoice < 1)) {
-    //              return alert('Вы проиграли');
-    //         }
-    //         if ((userChoice > 0.355 && userChoice < 0.668) && (computerChoice > 0 && computerChoice < 0.355)) {
-    //             return alert('Вы проиграли');
-    //         }
-    //         if ((userChoice > 0.668 && userChoice < 1) && (computerChoice > 0.355 && computerChoice < 0.668)) {
-    //             return alert('Вы проиграли');
-    //         }
+            //ничья
+            if ((userChoice > 0 && userChoice < 0.355) && (computerChoice > 0 && computerChoice < 0.355)) {
+                return alert('Ничья');
+            }
+            if ((userChoice > 0.355 && userChoice < 0.668) && (computerChoice > 0.355 && computerChoice < 0.668)) {
+                return alert('Ничья');
+            }
+            if ((userChoice > 0.668 && userChoice < 1) && (computerChoice > 0.668 && computerChoice < 0.1)) {
+                return alert('Ничья');
+            }
+            //выйгрыш
+            if ((userChoice > 0 && userChoice < 0.355) && (computerChoice > 0.355 && computerChoice < 0.668)) {
+                 return alert('Вы выйграли!');
+            }
+            if ((userChoice > 0.355 && userChoice < 0.668) && (computerChoice > 0.668 && computerChoice < 1)) {
+                return alert('Вы выйграли!');
+            }
+            if ((userChoice > 0.668 && userChoice < 1) && (computerChoice > 0 && computerChoice < 0.355)) {
+                return alert('Вы выйграли!');
+            }
+            //пройгрыш
+            if ((userChoice > 0 && userChoice < 0.355) && (computerChoice > 0.668 && computerChoice < 1)) {
+                 return alert('Вы проиграли');
+            }
+            if ((userChoice > 0.355 && userChoice < 0.668) && (computerChoice > 0 && computerChoice < 0.355)) {
+                return alert('Вы проиграли');
+            }
+            if ((userChoice > 0.668 && userChoice < 1) && (computerChoice > 0.355 && computerChoice < 0.668)) {
+                return alert('Вы проиграли');
+            }
             
 
-    //     } else {
-    //        return alert('Вы указали не верное значение');
+        } else {
+           return alert('Вы указали не верное значение');
            
-    //     }
+        }
         
 
-    // }
-    // console.log(computerChoice);
-    // game(userChoice, computerChoice);
+    }
+    console.log(computerChoice);
+    game(userChoice, computerChoice);
     
     // //task4
     

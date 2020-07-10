@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        #modal {
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            position: absolute;
+            left: 200px;
+            top: 200px;
+            display: none;
+        }
+
+        #open {
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+        }
+
+        #close {
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        var modal = document.createElement('div');
+        modal.id = 'modal';
+
+        var btnOpen = document.createElement('button');
+        btnOpen.id = 'open';
+        btnOpen.innerText = 'open modal';
+
+        var btnClose = document.createElement('button');
+        btnClose.id = 'close';
+        btnClose.innerText = 'close';
+
+        document.body.appendChild(modal);
+        document.body.appendChild(btnOpen);
+        modal.appendChild(btnClose);
+
+
+        btnOpen.addEventListener('click', function() {
+            modal.style.display = 'block';
+            btnOpen.style.display = 'none';
+        })
+
+        btnClose.addEventListener('click', function() {
+            modal.style.display = 'none';
+            btnOpen.style.display = 'block';
+        })
+    </script>
+</body>
+</html>
