@@ -91,8 +91,8 @@
          // calc (oper1, oper2, sign);
          
 
-         //task3
-         var searchPersona = 'Антон';
+         // //task3
+         // // var searchPersona = prompt('Введите имя');
          
          var personal = [
             {
@@ -100,85 +100,104 @@
                sName: 'Петров',
                age: 20,
                occupation: 'программист', 
+               show: function () {
+                  return this.name + ' ' + this.sName + ' ' + this.age + ' ' + this.occupation;
+               }
             },
             {
                name: 'Антон',
                sName: 'Антонов',
                age: 25,
                occupation: 'бухгалтер', 
+               show: function () {
+                  return this.name + ' ' + this.sName + ' ' + this.age + ' ' + this.occupation;
+               }
             },
             {
                name: 'Сергей',
                sName: 'Сергеев',
                age: 30,
                occupation: 'директор', 
+               show: function () {
+                  return this.name + ' ' + this.sName + ' ' + this.age + ' ' + this.occupation;
+               }
             },
             
 
          ]
-         function search (a, b) {
-            for (var i = 0; i < a.length; i++) {
-                  if (a[i].name === b) {
-                   var obj = a[i];
-                   return obj;
-                   break; 
+         // function search (a, b) {
+         //    for (var i = 0; i < a.length; i++) {
+         //          if (a[i].name === b) {
+         //           var obj = a[i];
+         //           return obj;
+         //           break; 
           
-                 }
-            }
-           }
+         //         }
+         //    }
+         //   }
             
             
-         console.log(search(personal, searchPersona));
+         // // console.log(search(personal, searchPersona));
 
+         // var namePer = prompt('Введите имя');
+         // var sNamePer = prompt('Введите фамилию');
+         // var agePer = prompt('Введите возраст');
+         // var occupationPer = prompt('Введите должность');
+
+         // var newPers = new Object();
          
-         var newPers = {
-               name: 'Миша',
-               sName: 'Михайлов',
-               age: 30,
-               occupation: 'программист', 
+         // newPers.name = namePer;
+         // newPers.sName = sNamePer;
+         // newPers.age = agePer;
+         // newPers.occupation = occupationPer;
+            
+         
+         
+          
+         // function addPersonal (arr, addObj) {
+         //    arr.push(addObj);
+         //    console.log(arr);
+         // }
 
-         }
-
-
-         function addPersonal (arr, addObj) {
-            arr.push(addObj);
-            console.log(arr);
-         }
-
-         addPersonal(personal, newPers); 
+         // addPersonal(personal, newPers); 
          
 
 
-         //Task4
+         // //Task4
 
-         function addVal (a) {
-            for (var i = 0; i < a.length; i++) {
-                  if (a[i].occupation === 'программист') {
-                   a[i].salary = 2000;
-                  } else 
-                  if (a[i].occupation === 'директор') {
-                   a[i].salary = 3000;
-                  } else
-                  if (a[i].occupation === 'бухгалтер') {
-                   a[i].salary = 1500;
-                  } 
-                  else {
-                     a[i].salary = 1000;
-                  }
-               }
-               console.log(a);
-           }
+         // function addVal (a) {
+         //    for (var i = 0; i < a.length; i++) {
+         //          if (a[i].occupation === 'программист') {
+         //           a[i].salary = 2000;
+         //          } else 
+         //          if (a[i].occupation === 'директор') {
+         //           a[i].salary = 3000;
+         //          } else
+         //          if (a[i].occupation === 'бухгалтер') {
+         //           a[i].salary = 1500;
+         //          } 
+         //          else {
+         //             a[i].salary = 1000;
+         //          }
+         //       }
+         //       console.log(a);
+         //   }
 
-           addVal(personal);
+         //   addVal(personal);
 
          //task5
 
-         var findPers = prompt('Поиск сотрудника по должности, введите должность').toLowerCase();
+         var findPers = prompt('сортировать сотрудников по должности/ имени/ возрасту/ фамилии').toLowerCase();
          
+         function ucFirst(str) {
+            if (!str) return str;
+
+            return str[0].toUpperCase() + str.slice(1);
+         }
          function sort (arr, param) {
                  var sortArr = []; 
                  for (var i = 0; i < arr.length; i++) {
-                    if (arr[i].occupation == param) {
+                    if (arr[i].occupation == param || arr[i].age == param || arr[i].sName == ucFirst(param) || arr[i].name == ucFirst(param)) {
                      sortArr.push(arr[i]);
                     } 
                     
